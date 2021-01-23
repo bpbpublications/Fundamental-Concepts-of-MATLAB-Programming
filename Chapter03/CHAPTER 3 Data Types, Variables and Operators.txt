@@ -1,0 +1,540 @@
+str_new = 'Dr. Brijesh Bakariya'
+
+n=123
+
+double_num=double(n)
+
+unint = uint32(234)
+
+int_32 = int32(124)
+
+unint_32=uint32(n)
+
+int_64=int64(n)
+
+uint_64=uint64(n)
+
+single_num=single(n)  
+
+double_num=double(n)
+
+int_64 =123
+
+
+uint_64 =
+
+single_num=single(n)  
+
+
+logical(2) 
+
+logical(0)
+
+logical(123)
+
+char('a')
+
+char('asdsd')
+
+
+
+ch='A'
+
+
+char(ch)
+
+
+int2str(12)
+
+ 
+mat=[1,2;3,4]
+
+
+mat2str(mat)
+
+
+num2str(123)
+
+
+str2double('Brijesh Bakariya')
+
+str2double('2')
+
+native2unicode('-2')
+
+ 
+p=str2double('2')
+
+str2double('-2')
+
+base2dec('212',3)
+
+bin2dec('101')
+
+
+dec2base(23, 2)
+
+dec2bin(111)
+
+
+dec2bin(12)
+
+
+dec2hex(16)
+
+ 
+hex2dec('a')
+
+ 
+hex2num('8')'
+
+
+num2hex(12)
+
+
+c = {[1],    [2, 3, 4];
+     [5; 9], [6, 7, 8; 10, 11, 12]};
+
+m = cell2mat(c)
+
+
+Teacher = {{'Brijesh','Bakariya'}}
+
+colHeadings = {'fiveYears' 'tenYears' 'fifteenYears'}; 
+devel = {{'Lee','Reed','Hill'}, {'Dean','Frye'}, ...
+   {'Lane','Fox','King'}};
+sales = {{'Howe','Burns'}, {'Kirby','Ford'}, {'Hall'}};
+mgmt = {{'Price'}, {'Clark','Shea'}, {'Sims'}};
+qual = {{'Bates','Gray'}, {'Nash'}, {'Kay','Chase'}};
+docu = {{'Lloyd','Young'}, {'Ryan','Hart','Roy'}, {'Marsh'}};
+
+employees = [devel; sales; mgmt; qual; docu]
+
+
+
+rowHeadings = {'development', 'sales', 'management', ...
+   'quality', 'documentation'};
+depts = cell2struct(employees, rowHeadings, 1)
+
+
+cellstr(colHeadings)
+
+
+num2cell(12)
+
+
+str_new = 'Dr. Brijesh Bakariya'
+
+
+s = 'Dr. Brijesh Bakariya'
+
+ 
+isa(pi,'double')
+
+
+ 
+cell={1,2}
+
+
+
+iscell(cell)
+
+
+cell_str= {'Dr.','Brijesh', 'Bakariya'}
+
+
+iscellstr(cell_str)
+
+
+ch='a'
+
+
+ischar(ch)
+
+
+arr=[1,2,3,4]
+
+ 
+S = struct('one', 1, 'two', 2)
+
+
+fields = isfield(S, {'two', 'pi', 'One', 3.14})
+
+
+a=2.5
+
+isfloat(a)
+
+
+ishghandle(a)
+
+ 
+isinteger(12)
+
+isinteger(12)
+
+
+isjava(a)
+
+
+islogical(2<4)
+
+
+isnumeric(2)
+
+
+isobject(pi)
+
+
+isobject(pi)
+
+
+isreal(2.5)
+
+
+isscalar(2)
+
+ 
+str='Brijesh Bakariya'
+
+isstr(str)
+
+
+isstruct(ans)
+
+
+isstruct(str)
+
+
+v=[1,2]
+
+isvector(v)
+
+class(pi)
+
+
+validateattributes(pi)
+
+classes = {'numeric'}
+attributes = {'size',[4,6,2]}
+
+ 
+A = rand(3,5,2);
+
+ 
+whos
+
+
+I=12
+
+
+J=12.5
+
+K='m'
+
+
+str='Brijesh Bakariya'
+
+
+mat=[1 2 3; 4 5 6; 7 8 9]
+
+arr=[2 3 4]
+
+
+a=10
+
+
+b=20
+
+a+b
+
+
+a-b
+
+
+a*b
+
+
+a/b
+
+
+arr1=[3;4;5]
+
+
+arr2=[5 6 7]
+
+
+p=arr .* arr2
+
+q=mat/2
+
+
+r=arr./2
+
+
+t=arr2 .\2
+
+
+mat ^ 2
+
+
+arr2 .^ 3
+
+trans=mat'
+
+
+trans_arr= arr2.'
+
+
+p=10
+
+
+q=20
+
+
+mat=[1,2,3;4,5,6;7,8,9]
+
+
+arr=[1 2 3]
+
+uplus(p)
+
+
+plus(p,q)
+
+
+uminus(p)
+
+
+minus(p,q)
+
+
+times(p,q)
+
+
+mtimes(p, q) 
+
+
+rdivide(p, q) 
+
+
+p1=10.5
+
+q1=20.5
+
+double p=10
+
+
+power(2, 3) 
+
+
+mpower(2,3) 
+
+
+sum(arr) 
+
+ceil(2.4) 
+
+
+fix(0.7) 
+
+
+floor(2.6) 
+
+
+p = 10;
+q = 20;
+if (p >= q)
+max = p
+else
+max = q
+end
+
+
+
+p1 = 7;
+q1 = 10;
+if (p1 <= q1)
+max = p1
+else
+max = q1
+end
+
+
+
+p1 = 7;
+q1 = 10;
+if (p1 == q1)
+max = p1
+else
+max = q1
+end
+
+
+
+p1 = 7;
+q1 = 10;
+if (p1 ~= q1)
+max = p1
+else
+max = q1
+end
+
+
+
+
+p=10
+
+
+q=20
+
+eq(p,q)
+
+ge(p,q) 
+
+
+gt(p,q) 
+
+
+le(p,q) 
+
+
+lt(p,q) 
+
+
+ ne(p,q)
+
+
+isequal(p,q)
+
+
+isequaln(p,q)
+
+
+a= 50;
+b = 100;
+if ( a && b )
+disp('True');
+end
+
+
+
+a= 0;
+b = 100;
+if ( a || b )
+disp('True');
+end
+
+
+
+
+a= 0;
+b = 100;
+if ( ~a )
+disp('True');
+end
+
+
+
+a=10
+
+
+b=20
+
+
+and(10,20)
+
+
+or(10,20)
+
+
+not(10)
+
+
+not(0)
+
+
+xor(a,b)
+
+
+all(a) 
+
+
+any(a) 
+
+
+islogical(a) 
+
+
+logical(a) 
+
+
+
+
+A=5
+
+
+B=7
+
+
+A1=dec2bin(A)
+
+
+B1=dec2bin(B)
+
+A&B
+
+
+A1&B1
+
+
+A1|B1
+
+
+
+p=dec2bin(14)
+
+
+q=dec2bin(19)
+
+ 
+bitand(123,12)
+
+bitcmp(12)
+
+
+bitcmp(2)
+
+ 
+bitget(12,1)
+
+
+bitor(101,111)
+
+
+bitshift(101, 1) 
+
+
+bitxor(101,110) 
+
+
+A=[1 2 3]
+
+
+B=[3 4 5]
+
+
+intersect(A,B) 
+
+
+intersect(A,B,'rows') 
+
+
+union (A,B)
+
+setdiff(A,B) 
+
+unique(A) 
+
+unique(B)
+

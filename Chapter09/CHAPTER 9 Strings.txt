@@ -1,0 +1,237 @@
+ str = 'I am good boy'
+
+
+ str_ascii = uint8(str)
+
+
+ strb= char(str_ascii)
+
+
+ str_16bit = uint16(str)
+
+
+ strb = char(str_16bit)
+
+
+ docp = char('Dr Kulwinder Parmar', 'Assistant Professor', ...
+'IK Gujral Punjab Technical University')
+
+
+ docp = ['Dr Kulwinder Parmar'; 'Assistant Professsor'; ...
+'IK Gujral Punjab Technical University']
+Dr Kulwinder Parmar                  
+Assistant Professor                 
+IK Gujral Punjab Technical University    
+
+ name = Dr Kulwinder Parmar ';
+position = ' Assistant Professor ';
+
+ worksAt = ‘IK Gujral Punjab Technical University’;
+
+ prof = [name ', ' position ', ' worksAt]
+prof =
+Dr Kulwinder Parmar , Assistant Professor, IK Gujral Punjab Technical University
+
+ prof = strcat(name, ', ', position, ', ', worksAt)
+prof =
+Dr Kulwinder Parmar,Assistant Professor,IK Gujral Punjab Technical University  
+For combining strings into a cell array by using the function cellstr( ) description is provided as below:
+
+ prof = char(name, position, worksAt);
+
+ prof = cellstr(prof);
+
+ disp(prof)
+    'Dr Kulwinder Parmar'
+   'Assistant Professor'
+  'IK Gujral Punjab Technical University'
+
+
+
+
+ a=blanks (10);
+
+ chr=['|' a '|']
+chr = |          | 
+
+ A = [“ assistant”; “  associate”; “  full professor”]
+
+ B=cellstr(A)
+
+
+ A=[65 66;67 68];
+
+ B='point of action';
+
+ C=char(A,B)
+
+ A={'Ram','Sham';'Brijesh','Kulwinder'}
+
+ B=iscellstr(A)
+
+
+ chr='Kulwinder Brijesh'
+
+
+ B=ischar(chr)
+
+
+A = "The present time of India is: %d:%d %s";
+
+A1 = 11;
+
+A2 = 06;
+
+A3 = 'a.m.';
+
+str = sprintf(A,A1,A2,A3)
+str = 
+"The present time of India is: 11:06 a.m."
+
+ firstnames={'Kulwinder';'Brijesh'};
+
+ lastnames={'Parmar';'Bakaryia'};
+
+ names=strcat(lastnames, {', '}, firstnames)
+
+
+ A={'4','2','8'};
+
+ str=strjoin(A,{' * ',' = '})
+
+
+
+ Chr='Dr Kulwinder Singh'
+
+ tf = ischar(chr)
+
+ X=rand(1,10)
+
+ tf = ischar(X)
+
+ chr='This is right choice'
+
+ TF=isletter(chr)
+
+
+ chr='This is right choice'
+
+ TF = isspace(chr)
+
+
+ chr='This is right choice'
+
+ TF = isstrprop(chr,'alpha')
+
+ A='1.234  2.3456  3.4567'
+
+  B = sscanf(A,'%f')
+
+
+ str = 'This is right choice';
+ P = strfind(str,'is')
+
+ P = strfind(str,'ice')
+
+ A='Brijesh 31 33 abc department 3333'
+
+
+ using_strrep = strrep(A, '33', '#')
+
+ A= ["abc","def","ghi"];
+
+ str = "abc";
+
+ validStr = validatestring(str,A)
+
+ str = 'apple bat ball bell bomb bumper cat can car dog egg fish';
+
+ exp = 'c[aeiou]';
+
+ SI = regexp(str,exp)
+
+
+
+ A= 'Ram is a \n good person than Sham'
+
+ p = regexptranslate('escape','\n')
+
+ idx = regexp(A,p)
+
+  A = 'Apple';
+
+B = {'Apple','Bat';
+      'a','Apple'};
+C = strcmp(A,B)
+
+
+
+ A = 'Bat';
+
+B = {'Apple','bat';
+      'bat','Bat'};
+
+C = strcmpi(A,B)
+
+
+
+ A = 'Jalandhar City, KS';
+
+ B = 'Jalandhar City, MO';
+
+ C = strncmp(A,B,11)
+
+ A = 'Jalandhar City, KS';
+
+ B = 'jalandhar City, MO';
+
+ C=strncmpi(A,B,11)
+
+ A = 'Jalandhar City, KS';
+
+B = 'jalandhar , MO';
+
+C=strncmpi(A,B,11)
+
+ A = ['Red';
+       'Blue ';
+       'Orange    ']
+A =     ' Red'
+    ' Blue '
+    ' Orange    '
+
+ str = string(A)
+str = “ Red”
+    “ Blue  ”
+    “ Orange   ”    
+
+ nstr = deblank(str)
+nstr = “Red”
+    “ Blue”
+    “Orange”    
+
+
+
+ A=sprintf('        This is right choice')
+
+ B = strtrim(A)
+
+
+
+ B=lower(A)
+B =
+
+ A='dr brijesh bakariya'
+
+ B=upper(A)
+
+
+
+ A = ["Red";
+        "Blue   ";
+        "Orange   "]
+
+ B=strjust(A)
+
+C = strjust(A ,'center')
+

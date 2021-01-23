@@ -1,0 +1,137 @@
+ [X,Y] = meshgrid(1:0.5:10,1:20);
+ Z = sin(X) + cos(Y)+X*0.5;
+ surf(X,Y,Z
+
+
+ x = 0:pi/10:3*pi;
+ y1 = cos(x);
+ y2 = cos(x-0.25);
+y3 = cos(x-0.5);
+ plot(x,y1,'r',x,y2,'b--^',x,y3,'c*')
+Text 
+ 
+
+ t = 0:pi/5:2*pi;
+ patch(sin(t),cos(t),'y')
+ 
+ a = t(1:length(t)-1);
+ patch(sin(a),cos(a),1:length(a),'FaceColor','interp')
+
+
+
+ t = 0:pi/20:3*pi;
+y = exp(cos(t));
+h = plot(t,y,'YDataSource','y');
+for k = 1:.1:10
+y = exp(sin(t.*k));
+refreshdata(h,'caller')
+drawnow; pause(.1)
+end
+
+
+ x = [1:15];
+y = [75, 58, 56, 87, 84, 69, 75, 90, 87, 50, 85, 92, 75, 60, 95];
+bar(x,y), xlabel('Student'),ylabel('Marks'),
+title('Third Semester')
+print -deps graph.eps
+
+
+
+ [x,y] = meshgrid(-10:0.2:10,-6:0.2:6);
+c = x.^2 + y.^2;
+contour(x,y,c)
+
+
+
+ [x,y] = meshgrid(-2:.125:2);
+c = x .* exp(-x.^2 - y.^2);
+surf(x, y, c)
+print -deps graph.eps
+
+
+
+
+  x = -3*pi:pi/20:3*pi;
+y = x.^2;
+subplot(2,2,1:2)
+plot(x,y)
+h1=subplot(223);
+y = x.^4;
+plot(x,y)
+h2=subplot(224);
+y = x.^5;
+plot(x,y)
+
+
+
+
+
+
+
+ p1 = get(h1,'Position');
+t1 = get(h1,'TightInset');
+p2 = get(h2,'Position');
+t2 = get(h2,'TightInset');
+x1 = p1(1)-t1(1); y1 = p1(2)-t1(2);
+x2 = p2(1)-t2(1); y2 = p2(2)-t2(2);
+w = x2-x1+t1(1)+p2(3)+t2(3); h = p2(4)+t2(2)+t2(4);
+
+ annotation('rectangle',[x1,y1,w,h],...
+ 'FaceAlpha',.2,'FaceColor','Yellow','EdgeColor','yellow'); 
+
+
+
+
+  hb = bar(rand(4));
+hg = hggroup;
+set(hb,'Parent',hg)
+set(hg,'Visible','on')
+
+
+
+
+ h = surf(peaks(30)); view(-10,30)
+t = hgtransform;
+set(h,'Parent',t)
+ry_angle = -25*pi/180;
+Ry = makehgtform('yrotate',ry_angle);
+set(t,'Matrix',Ry)
+
+
+
+
+h = surf(peaks(30)); view(-10,30)
+t = hgtransform;
+set(h,'Parent',t)
+ry_angle = -25*pi/180;
+Ry = makehgtform('yrotate',ry_angle);
+set(t,'Matrix',Ry)
+Tx1 = makehgtform('translate',[-25 0 0]);
+Tx2 = makehgtform('translate',[25 0 0]);
+set(t,'Matrix',Tx2*Ry*Tx1)
+
+
+
+
+
+ function y = computesquare(x)
+y = x.^2;
+end
+
+ f = @computesquare;
+a = 5;
+b = f(a)
+
+b =
+25
+
+ h = @ones;
+a = h()
+a =
+     1
+
+as below:
+ a = h
+
+
+

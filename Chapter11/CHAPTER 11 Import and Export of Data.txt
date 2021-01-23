@@ -1,0 +1,152 @@
+A='weeklyrainfall.txt';
+
+delimiterIn = ' ';
+
+headerlinesIn = 1;
+
+B = importdata(A,delimiterIn,headerlinesIn);
+
+for k = [1:7]
+
+disp(weeklyrainfall{1, k})
+
+disp(weeklyrainfall(:, k))
+
+disp(' ')
+
+end
+
+
+
+
+A = importdata ('-pastespecial')
+
+A=   ‘Every Morning is new chapter to play’
+
+x = 0:1:10; y = exp(x); z=100*y; %Assign variables
+
+ fid = fopen('exp.txt','w'); %Open file for write
+
+ fprintf(fid,' x y z\n'); %Write header
+
+ fprintf(fid,'%6.2f %12.8f %10.5e\r',[x; y; z]); %Write vector data
+
+ fclose(fid); %Close file
+
+
+fid = fopen('exp.txt','w'); %Open file for write
+
+ fprintf(fid,' x y z\n'); %Write header
+
+ for I=0:1:10; %Loop
+
+ x = I; y = exp(x); z=100*y; %Assign variables
+
+ fprintf(fid,'%6.2f %12.8f %10.5e\n',x,y,z); %Write scalar data
+
+ end
+
+ fclose(fid); %Close file
+
+
+
+fid = fopen('exp.txt','r'); %Open file for read
+
+ H=fscanf(fid,'%c',[1,27]); %Read Header
+
+ M=fscanf(fid,'%f',[3,inf]); %Read data
+
+ fclose(fid); %Close file
+
+ x=M(1,:); %Extract x vector from input matrix
+
+ y=M(2,:); %Extract y vector from input matrix
+
+ z=M(3,:); %Extract z vector from input matrix
+
+  H = 'x y z' 
+
+
+diary fname
+
+diary off
+
+treesize.txt.
+radii=3
+
+volumes = (4/3).*pi.*((radii).^3);
+
+masses=5.1
+
+densities = (10^27).*masses./((10^15).*volumes);
+
+treeinfo(:,1) = volumes; 
+
+ treeinfo(:,2) = densities;
+
+diary tree4.txt
+
+format short e
+
+
+
+tree5(:,1) = volumes;
+
+tree5(:,2) = densities;
+
+dlmwrite('tree5.txt',tree5, ';')
+
+ dlmwrite('tree5.txt',tree5, ';') 
+
+k = 'Dr Parmar';
+
+save textdata.out k -ascii
+
+type textdata.out
+
+
+numarray = [ 0 9 8 ; 7 6 5 ; 4 3 2; 1 0 -1];
+save arraydata2.out numarray -ASCII;
+type arraydata2.out
+
+dlmwrite('arraydata3.out', numarray, ' ');
+
+
+
+treesize.txt.    
+outdata(1,1:10) = 'tree      '
+
+
+outdata(1,11:50)='Volume       (km^3)       Density(g/cc)'
+
+outdata(2,1:10) = 'Earth '
+
+>>outdata(2,11:50) = num2str(treeinfo(1,:))
+
+>>outdata(3,1:10) = 'Mars '
+
+>>outdata(3,11:50) = num2str(treeinfo(2,:))
+
+>>outdata(4,1:10) = 'Venus '
+
+>>outdata(4,11:50) = num2str(treeinfo(3,:))
+
+
+x = 0:5:100;
+
+y = [x; log(x)];
+
+fid = fopen('logtable.txt', 'w');
+
+fprintf(fid, 'Log Function\n\n');
+
+
+fprintf(fid, '%f %f\n', y);
+
+fclose(fid);
+
+type logtable.txt
+
+
+
+

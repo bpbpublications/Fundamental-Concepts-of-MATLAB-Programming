@@ -1,0 +1,431 @@
+plot (Argument 1, Argument2)
+
+x = 0:pi/10:2*pi
+
+y = sin(x)
+
+x = linspace(0,2*pi,10)
+
+
+y=sin(x)
+
+plot(x,y)
+
+ 
+x = linspace(0,2*pi,5)
+
+
+y=sin(x)
+
+
+stairs(x,y)
+ 
+x = linspace(0,2*pi,5)
+
+y1=sin(x)
+
+y2 = sin(x-pi/2)
+
+plot(x,y1,x,y2)
+ 
+
+x = linspace(0,2*pi,10)
+
+
+y=sin(x)
+
+
+plot(x,y,'--')
+
+ 
+
+
+x = linspace(0,2*pi,10)
+
+y1=sin(x)
+
+
+y2 = sin(x-pi/2)
+
+
+plot(x,y1,'--',x,y2,':')
+
+ 
+
+x = linspace(0,2*pi,12);
+
+y1 = sin(x)
+
+y2 = sin(x-pi/2)
+
+plot(x,y1,'--g',x,y2,':r')
+ 
+x = linspace(0,2*pi,15)
+
+y1 = sin(x)
+
+y2 = sin(x-pi/3)
+
+
+plot(x,y1,'--go',x,y2,':r*')
+
+
+
+z = peaks(10)
+
+mesh(z)
+ 
+
+surf(z)
+
+z = peaks(3)
+
+
+surfl(z)
+
+
+z = peaks(7)
+
+
+contour(z,8)
+ 
+
+x = -2:.2:2
+
+y = -1:.2:1
+
+
+[r,c] = meshgrid(x,y)
+
+t = r.*exp(-r.^2-c.^2)
+
+
+[r1,c1] = gradient(t,.2,.2)
+
+quiver(x,y,r1,c1)
+
+xlim([-2.5 2.5]) 
+
+ 
+
+x = -2:.2:2;
+y = -2:.25:2;
+z = -2:.16:2;
+
+[x,y,z] = meshgrid(x,y,z);
+
+v = x.*exp(-x.^2-y.^2-z.^2);
+
+xslice = [-1.2,.8,2];    
+
+yslice = 2;              
+
+zslice = [-2,0];         
+
+
+slice(x,y,z,v,xslice,yslice,zslice)
+
+xlabel('x')
+
+ylabel('y')
+
+zlabel('z')
+
+ 
+
+x = linspace(0,2*pi,7)
+
+
+y=sin(x)
+
+plot(x,y)
+hold on
+x1 = linspace(0,2*pi,7)
+
+
+
+y1=cos(x)
+
+
+plot(x1,y1)
+
+plot(x,y)
+
+
+line(X,Y)
+
+
+line(X,Y,Z)
+
+line(X,Y,Z,'PropertyName',PropertyValue,...)
+
+line('PropertyName',PropertyValue,...) 
+
+h = line(...)
+
+x = linspace(0,6)
+
+y=sin(x)
+
+
+line(x,y)
+
+ 
+
+
+x = [1 9]
+
+y = [2 12]
+
+
+line(x,y,'Color','red','LineStyle','--')
+
+view(a,b)
+
+view([a,b])
+
+view([x,y,z])
+
+a = 0
+
+view(a, b)
+
+
+b =
+    90
+
+view(a, b)
+
+ 
+
+a = 180
+
+b = 90
+view(a, b)
+
+a =
+   180
+
+b =
+    90
+
+view(a, b)
+
+ 
+
+theta = 0:pi/4:2*pi;
+
+plot(theta*180/pi,sin(theta),  '-o', 'LineWidth', 2, 'MarkerSize', 6)
+ylabel('sine of angle')
+xlabel ('angle theta')
+
+theta = 0:pi/4:2*pi; 
+
+plot(theta*180/pi,sin(theta),  '-o', 'LineWidth', 2, 'MarkerSize', 6)
+ylabel('sine of angle')
+xlabel ('angle theta')
+
+ 
+
+
+X = 1 : 100;
+ Y = log(X);
+ 
+
+ subplot(2,1,1)
+ plot(X,Y)
+ title('\bf Log Plot on Linear Scale')
+ ylabel('\bf log(x)')
+grid on
+ 
+
+ subplot(2,1,2)
+ semilogx(X,Y)
+ title('\bf Log Plot on Semilog Scale')
+ ylabel('\bf log(x)')
+ grid on
+
+ 
+
+
+x = 0:0.1:15;
+y1 = sin(2*x);
+y2 = cos(2*x);
+figure
+subplot(2,1,1)      
+plot(x,y1)
+title('Subplot 1')
+subplot(2,1,2)       
+plot(x,y2,'+')    
+title('Subplot 2')
+
+ 
+
+
+subplot(2,2,1)       
+plot(x,y1)         
+title('Subplot 1')
+subplot(2,2,2)       
+scatter(x,y2)       
+title('Subplot 2')
+subplot(2,2,3)      
+stem(x,y1)           
+title('Subplot 3')
+subplot(2,2,4)       
+yyaxis left            
+plot(x,y1)           
+yyaxis right         
+plot(x,y2)
+title('Subplot 4')
+ 
+
+
+
+fm = 20e3;
+fc = 100e3;
+tstep = 100e-9;
+tmax  = 200e-6;
+t = 0:tstep:tmax;
+xam = (1 + cos(2*pi*fm*t)).*cos(2*pi*fc*t);
+T = 1e-6;
+N = 200;
+nT = 0:T:N*T;
+xn = (1 + cos(2*pi*fm*nT)).*cos(2*pi*fc*nT);
+ 
+
+of a 2x2 grid
+fig = figure;
+subplot(2, 2, [1 3]);
+stem(nT,xn);
+xlabel('t');
+ylabel('x[n]');
+title('Sampled Every T=1e-6 ');
+ 
+
+grid
+subplot(2, 2, 2);
+plot(t, xam);
+axis([0 200e-6 -2 2]);
+xlabel('t');
+ylabel('xam(t) ');
+title('AM Modulated Signal');
+ 
+
+grid
+subplot(2, 2, 4);
+plot(nT, xn);
+xlabel('t');
+ylabel('x_zoh(t)');
+title('Reconstruction at T=4e-6 ');
+ 
+
+
+response = fig2plotly(fig, 'filename', 'matlab-three-subplots');
+plotly_url = response.url;
+
+ 
+
+
+[x,y,z] = peaks;
+ 
+
+min_x = min(min(x));
+min_y = min(min(y));
+max_x = max(max(x));
+max_y = max(max(y));
+ 
+
+planeimg = abs(z);
+ 
+
+figure; hold on;
+ 
+
+surf(x,y,z);
+ 
+
+colormap(gray);
+ 
+
+imgzposition = -10;
+ 
+
+surf([min_x max_x],[min_y max_y],repmat(imgzposition, [2 2]),...
+    planeimg,'facecolor','texture')
+ 
+
+colormap(jet);
+ 
+
+view(45,30);
+ 
+
+ 
+xlabel('x');
+ylabel('y');
+zlabel('z');
+
+
+ 
+
+
+[x,y,z] = peaks;
+min_x = min(min(x));
+min_y = min(min(y));
+max_x = max(max(x));
+max_y = max(max(y));
+
+planeimg = abs(z);
+minplaneimg = min(min(planeimg));
+scaledimg = (floor(((planeimg - minplaneimg) ./ ...
+    (max(max(planeimg)) - minplaneimg)) * 255)); 
+ 
+colorimg = ind2rgb(scaledimg,jet(256));
+ 
+figure; hold on;
+ 
+surf(x,y,z,'edgecolor','none');
+ 
+colormap(gray);
+ 
+imgzposition = -10;
+ 
+ 
+surf([min_x max_x],[min_y max_y],repmat(imgzposition, [2 2]),...
+    colorimg,'facecolor','texture')
+ 
+view(45,30);
+ 
+xlabel('x');
+ylabel('y');
+zlabel('z');
+
+
+ 
+
+Example:
+
+p1 = [0 0 0];
+p2 = [2 0 0];
+p3 = [2 4 0];
+p4 = [0 4 0]; 
+ 
+x = [p1(1) p2(1) p3(1) p4(1)];
+y = [p1(2) p2(2) p3(2) p4(2)];
+z = [p1(3) p2(3) p3(3) p4(3)];
+ 
+fill3(x, y, z, 1);
+xlabel('x'); ylabel('y'); zlabel('z');  
+
+ 
+
+p5 = [0 0 3];
+p6 = [2 0 3];
+p7 = [2 4 3];
+p8 = [0 4 3];
+ 
+ 
+x = [p5(1) p6(1) p7(1) p8(1)];
+y = [p5(2) p6(2) p7(2) p8(2)];
+z = [p5(3) p6(3) p7(3) p8(3)];
+fill3(x, y, z, 2);

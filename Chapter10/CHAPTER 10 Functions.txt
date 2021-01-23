@@ -1,0 +1,165 @@
+Example: User defined function for calculating factorial of a given number.
+
+
+function fac = fact(i)
+    fac = prod(1:i);
+end
+
+
+
+Example: Function for getting maximum number from 10 numbers.
+
+function max = maxnum(num1, num2, num3, num4, num5, num6, num7, num8, num9, num10)
+max =  num1;
+if(num2 > max)
+   max = num2;
+end
+if(num3 > max)
+   max = num3;
+end
+if(num4 > max)
+   max = num4;
+end
+if(num5 > max)
+   max = num5;
+end  
+ if(num6 > max)
+   max = num6;
+end
+if(num7 > max)
+   max = num7;
+end
+   if(num8 > max)
+   max = num8;
+    end
+if(num9 > max)
+   max = num9;
+end
+ if(num10 > max)
+   max = num10;
+end  
+end
+
+
+maxnum(12,4,67,11,43,68,90,132,33,17)
+
+
+
+
+
+Example: Function for generating sinewave.
+
+function r = sinwave(x)
+r = sin(3*x)+sin(3.1*x)
+end
+
+
+x = 0:0.1:10
+
+
+y = sinwave(x)
+
+
+
+Example: Function for calculating area of circle.
+
+function [area,circum] = circleArea(r)
+area = pi*r * r
+circum = 2*pi*r
+end
+
+
+
+circleArea(3)
+
+
+Example: Function for breaks a total number of seconds into hours, minutes and remaining seconds.
+
+function [h,m, rems] = divideTime(totals)
+h = floor(totals/3600)
+rems = rem(totals,3600)
+m = floor(rems/60)
+end
+
+
+divideTime(872345)
+
+
+
+Example: Function for calculate average of two numbers.
+
+function avg = averageTwoNum(num1, num2) 
+    avg = (num1 + num2)/ 2.0;      
+  end 
+
+averageTwoNum(10,20)
+
+
+Example
+function Outer
+disp('This is the outer function')
+Inner
+ 
+   function Inner
+      disp('This is the inner function')
+   end
+ 
+end
+
+Outer()
+
+
+
+Example
+function Test1
+disp('Test1')
+Test2
+   function Test2   
+     disp('Test2')
+   end 
+end
+
+Test1()
+Test1
+
+
+Test2
+
+Example:
+function TestNew(x, y)              % Main function
+B(x,y)
+D(y)
+
+   function B(x,y)            % Nested in A
+   C(x)
+   D(y)
+
+      function C(x)           % Nested in B
+      D(x)
+      end
+   end
+ 
+   function D(x)              % Nested in A
+   E(x)
+ 
+      function E(x)           % Nested in D
+      disp(x)
+      end
+   end
+end
+
+
+TestNew(10,20)
+
+
+
+
+Example:
+function xSum = sum3no(x1, x2, x3);
+% This function sums 3 variables
+    sum1 = x1 + x2;
+    xSum = sum1 + x3;
+end
+
+sum3no(10,20,30)
+

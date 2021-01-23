@@ -1,0 +1,449 @@
+i=4;
+if (i >= 0) 
+ j = sqrt(i)
+ end
+
+
+
+
+
+a = 2;
+b = 3;
+if (a<b)
+    i= -1
+end
+
+
+
+
+
+i = 5;
+if i > 4
+fprintf('i is greater than 4\n' );
+end
+fprintf('value of i is : %d\n', i);
+
+
+
+
+i=3; 
+if (i < 0) 
+ j = -1;
+else
+ j = 2;
+ end
+
+
+
+
+n=input('Enter a number');
+f=1;
+if n<0
+fprintf(' you have entered is negative');
+else
+    for i=1:n
+       f=f*i;
+    end
+fprintf(' The factorial of %d is = %d\n',n,f);
+end
+
+
+
+
+
+n=input('Enter a number');
+if(rem(n,2)==0)
+fprintf('Number is Even \n');
+else
+fprintf('Number is Odd \n');
+end
+
+
+
+
+
+n=input('Enter a number');
+if(rem(n,5)==0)
+fprintf('Number is divisible by 5 \n');
+else
+fprintf('Number is not divisible by 5 \n');
+end
+
+
+
+
+n = input('Enter a number: ');
+ 
+if (n < 0)
+    disp('Negative')
+else
+  disp('Positive')  
+end
+
+
+
+
+
+n = input('Enter a number: ');
+ 
+if n < 0
+    disp('Negative')
+elseif n > 0
+    disp('Positive')
+else
+    disp('Zero')
+end
+
+
+
+
+i = 10;
+if i == 2
+fprintf('Value of i is 2\n' );
+elseif( i == 5 )
+ 
+fprintf('Value of 2 is 5\n' );
+elseif i == 10
+ 
+fprintf('Value of i is 10\n' );
+else
+ 
+fprintf('None of the values are matching\n');
+fprintf('Exact value of i is: %d\n', i );
+ 
+end
+
+
+
+
+
+
+num = input('Enter a number: ');
+ 
+switch (num)
+    case -1
+        disp('negative one')
+    case 0
+        disp('zero')
+    case 1
+        disp('positive one')
+    otherwise
+        disp('other value')
+end
+
+
+
+
+
+[dayNum, dayString] = weekday(date, 'long', 'en_US');
+ 
+switch dayString
+   case 'Monday'
+      disp('Start of the work week')
+   case 'Tuesday'
+      disp('Day 2')
+   case 'Wednesday'
+      disp('Day 3')
+   case 'Thursday'
+      disp('Day 4')
+   case 'Friday'
+      disp('Last day of the work week')
+   otherwise
+      disp('Weekend!')
+end
+
+
+
+
+
+
+
+x = 2;
+   switch (x)
+   
+       case 1
+           disp('Choice is 1')
+       case 2
+           disp('Choice is 2')
+       case 3
+           disp('Choice is 3')
+       otherwise
+           disp('Choice other than 1, 2 and 3')
+                  
+   end
+
+
+
+
+
+
+
+a = 100;
+   b = 200;
+ 
+   switch(a) 
+   
+      case 100
+         disp('This is part of outer switch');
+      
+         switch(b) 
+            case 200
+                disp('This is part of inner switch');
+            
+         end
+   end
+
+
+
+
+
+
+color=input('Please choose a color(1: red,2: green,3: blue):\n');
+    switch (color)         
+        case 1 
+            fprintf('you chose red color\n');
+            break;
+        case 2
+            fprintf('you chose green color\n');
+            break;
+        case 3
+            fprintf('you chose blue color\n');
+            break;
+        default
+            fprintf('you did not choose any color\n');
+    end
+
+
+
+
+
+
+
+grade = 'D';
+switch(grade)
+case 'A'
+fprintf('Excellent!\n' );
+case 'B'
+fprintf('Well done\n' );
+case 'C'
+fprintf('Well done\n' );
+case 'D'
+fprintf('You passed\n' );
+case 'F'
+fprintf('Better try again\n' );
+end
+
+
+
+
+
+
+
+color = 'blue';
+switch color                   
+    case 'red'
+        A = 1;    
+    case 'blue'
+        A = 2;
+    case {'green','purple'}     
+        A = 3;
+    otherwise                  
+        A = 4;
+end
+
+
+
+
+choice = input('Yes or no? (y/n) ', 's');
+switch choice
+    case {'Y', 'y'}
+        disp('yes')
+    case {'N', 'n'}
+        disp('no')
+    otherwise
+        disp('unknown choice')
+end
+
+
+
+
+
+x = [16 70 36];
+ptype = 'pie3';
+switch ptype
+    case 'bar' 
+        bar(x)
+        title('Bar Graph')
+    case {'pie','pie3'}
+        pie3(x)
+        title('Pie Chart')
+    otherwise
+        warning('Unexpected plot type. No plot created.')
+end
+
+
+
+
+
+
+for m = 1:7
+    for n = 1:7
+        if m == n
+            a(m,n) = 2;
+        elseif abs(m-n) == 2
+            a(m,n) = 1;
+        else
+            a(m,n) = 0;
+        end
+    end
+end
+
+
+
+
+
+n=input('enter your birth year in complete 4 digits: ');
+yearvalue=mod(n,12);
+if (yearvalue==0)
+    'You were born on a 1 year'
+elseif (yearvalue==1)
+    'you were born on a 2 year'
+elseif (yearvalue==2)
+    'you were born on a 3 year'
+elseif(yearvalue==3)
+    'you were born on a 4 year'
+elseif(yearvalue==4)
+    'you were born on a 5 year'
+elseif(yearvalue==5)
+    'you were born on an 6 year'
+elseif(yearvalue==6)
+    'you were born on a 7 year'
+elseif(yearvalue==7)
+    'you were born on a 8 year'
+elseif(yearvalue==8)
+    'you were born on a 9 year'
+elseif(yearvalue==9)
+    'you were born on a 10 year'
+elseif(yearvalue==10)
+    'you were born on a 11 year'
+else(yearvalue==11)
+    'you were born on a 12 year'
+end
+
+
+
+
+
+
+b = input('Enter the number of bolts: ');
+n = input('Enter the number of nuts: ');
+w = input('Enter the number of washers: ');
+ 
+ 
+if b ~= n
+    disp('Check order: too few nuts');
+elseif b * 2 ~= w
+    disp('Check order: too few washers');
+else
+    disp('Order is OK.');
+end
+cb = b * .05;
+cn = n * .03;
+cw = w * .01;
+tc = cb + cn + cw;
+fprintf('Total cost: %d\n', tc);
+
+
+
+
+
+b = input('Enter the number of bolts: ');
+n = input('Enter the number of nuts: ');
+w = input('Enter the number of washers: ');
+if b ~= n
+    disp('Check order: too few nuts');
+elseif b * 2 ~= w
+    disp('Check order: too few washers');
+else
+    disp('Order is OK.');
+end
+cb = b * .05;
+cn = n * .03;
+cw = w * .01;
+tc = cb + cn + cw;
+fprintf('Total cost: %d\n', tc);
+if (n < b) && (w < 2*b)
+    disp('Check order: too few washers');
+    disp('Check order: too few nuts');
+elseif w < 2*b
+    disp('Check order: too few washers');
+elseif n < b
+    disp('Check order: too few nuts');
+else
+    disp('Order is OK.');
+end
+
+
+
+
+
+coeffs = round(-5 + 10*rand(1,3));
+a = coeffs(1);
+b = coeffs(2);
+c = coeffs(3);
+ 
+fprintf('The coefficients of the polynomial are : ');
+fprintf('a = %d,  b = %d,  c = %d\n',a,b,c);
+fprintf('\n');
+ 
+if a == 0
+    is_quadratic = false;
+    fprintf('The parabola is degenerate (a line).\n');
+else
+    is_quadratic = true;
+    if a > 0
+        fprintf('The parabola opens up.\n');
+    else
+        fprintf('The parabolic opens down.\n');
+    end
+end
+fprintf('\n');
+ 
+if ~is_quadratic
+    % The polynomial is not quadratic
+    if c ~= 0
+        r = -b/c;
+    else
+        r = b;
+    end
+    nroots = 1;
+else
+    % Compute the discriminant
+    D = b*b - 4*a*c;
+ 
+    if D < 0
+        nroots = 0;    % two imaginary roots
+        r = [];
+    elseif D == 0
+        nroots = 1;    % one real (multiple) root
+        r = -b/(2*a);
+    else
+        nroots = 2;    % two real roots
+        r(1) = (-b - sqrt(D))/(2*a);
+        r(2) = (-b + sqrt(D))/(2*a);
+    end
+end
+ 
+if (nroots == 0)
+    fprintf('There are no real roots.\n');
+elseif nroots == 1
+    fprintf('The real root is : \n');
+    fprintf('r = %12.4f\n',r);
+else
+    fprintf('The real roots are : \n');
+    for i = 1:nroots,
+        fprintf('r(%d) = %12.4f\n',i,r(i));
+    end
+end
+
+

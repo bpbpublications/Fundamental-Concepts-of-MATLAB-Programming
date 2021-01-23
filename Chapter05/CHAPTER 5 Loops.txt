@@ -1,0 +1,280 @@
+i = 1;
+while( i < 10 )
+fprintf('i: %d\n', i);
+i = i + 1;
+end
+
+
+
+
+for i = 1:10
+fprintf('value of i: %d\n', i);
+end
+
+
+
+
+for i = 1:2:10
+fprintf('i: %d\n', i); 
+end
+
+
+
+
+for i = 10:-2:0
+fprintf('value of i: %d\n', i); 
+end
+Output: 
+value of i: 10
+value of i: 8
+value of i: 6
+value of i: 4
+value of i: 2
+value of i: 0
+
+
+
+n=input('Enter a number');
+f=1;
+if n<0
+fprintf(' you have entered is negative');
+else
+    for i=1:n
+       f=f*i;
+    end
+fprintf(' The factorial of %d is = %d\n',n,f);
+end
+
+
+
+
+
+
+k = 0;
+for i = [1:3]
+  for j = [1:2]
+    k = k+1    
+  end
+end
+
+
+
+
+for i = [1:3]
+  for j = [1:2]
+    P(i,j) = 2   
+  end
+end
+
+
+
+
+
+
+for i = 1:10
+    if (i==5)
+        break;
+    end
+fprintf('value of i: %d\n', i);
+end
+fprintf('value of i: %d\n', i);
+
+
+
+
+
+for l=2:20
+for m=2:20
+if(~mod(l,m))
+break; 
+end
+end
+if(m >(l/m))
+fprintf('%d is prime\n', l);
+end
+end
+
+
+
+
+
+
+for j = 1 : 7
+  if (j == 2 | j == 5)
+    continue
+  end
+  fprintf('value of j: %d\n', j);
+end
+
+
+
+
+
+
+for num = 1:40
+    if mod(num,7)
+        continue
+    end
+    disp(['Divisible by 7: ' num2str(num)])
+end
+
+
+
+
+
+
+
+for i = 1:10,
+    fprintf('Hello, World!  count %d\n',i);
+end
+
+
+
+
+
+for i = 0:5:50,
+    fprintf('count; i = %2d\n',i);
+end
+
+
+
+
+
+for j = 50:-2:0,
+    fprintf('count; j = %2d\n',j);
+end
+
+
+
+
+
+
+
+k = 1;
+tic
+for c = ['Brijesh'],
+    fprintf('%2d   %s\n',k,c);
+    k = k + 1;
+end
+toc
+
+
+
+
+
+s = 0;
+for k = 1:20,
+    s = s + k;
+    fprintf('Sum of the numbers 1 to %2d : %5d\n',k, s);
+end
+
+
+
+
+
+k = 1;
+for c = ['Brijesh', 'Bakariya','PHD'],
+    fprintf('%2d   %s\n',k,c);
+    k = k + 1;
+end
+
+
+
+
+
+
+n = 200;
+x = rand(1,n);
+s = 0;
+for i = 1:n,
+    s = s + x(i);
+end
+fprintf('Result from ''sum'' function  : %24.16f\n',sum(x));
+fprintf('Result from the ''for'' loop  : %24.16f\n',s);
+
+
+
+
+
+for i=2:70
+ for j=2:70
+ if(~mod(i,j))
+ break; 
+ end
+ end
+ if(j > (i/j))
+      fprintf('%d IS PRIME NO \n', i);
+ end
+end
+
+
+
+
+
+a = 10;
+% while loop execution
+while (a < 18 )
+ fprintf('value of a: %d\n', a)
+ a = a+1;
+ if( a > 12)
+ % terminate the loop using break statement
+ break;
+ end
+end
+
+
+
+
+a = 10;
+%while loop execution
+while a < 20
+ if a == 15
+ % skip the iteration
+ a = a + 1;
+ continue;
+ end
+fprintf('value of a: %d\n', a);
+a = a + 1;
+end
+
+
+
+
+A = [ [1 2 3]' [3 2 1]' [2 1 3]']
+B=A
+for j=2:3,
+     for i=j:3,
+        B(i,:) = B(i,:) - B(j-1,:)*B(i,j-1)/B(j-1,j-1)
+     end
+   end
+
+
+
+
+h = 0.1;
+x = [0:h:2];
+y = 0*x;
+ y(1) = 1;
+ size(x)
+ 
+ for i=2:21,
+    y(i) = y(i-1) + h*(x(i-1)^2 - y(i-1)^2);
+   end
+ plot(x,y)
+ plot(x,y,'go')
+plot(x,y,'go',x,y)
+
+
+
+
+
+
+n = input('How many rows do you want?:  ');
+for R = 1:n
+for s = 1:R
+fprintf('*');
+end
+fprintf('\n');
+end
+
+
